@@ -1,0 +1,15 @@
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+  "use strict";
+
+  let sortedArr = arr.filter((a) => a > 0 && a % 1 == 0); 
+
+  const squaredIntegers = sortedArr.map((item) => {
+     return item * item;
+  });
+
+  return squaredIntegers;
+};
+
+const squaredIntegers = squareList(realNumberArray);
+console.log(squaredIntegers);
