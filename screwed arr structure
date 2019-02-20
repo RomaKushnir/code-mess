@@ -1,0 +1,15 @@
+function screwedArr(m, n) {
+  let arr = [];
+  let tempArr = [];
+  for (var j = 0; j < m; j++) {
+    for (let i = j + 1; i <= n * m; i+=m) {
+      tempArr.push(i);
+    }
+    arr.push(tempArr);
+    tempArr = [];
+  }
+  return arr;
+}
+
+console.clear();
+console.log(screwedArr(5, 7));
